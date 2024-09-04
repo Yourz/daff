@@ -133,11 +133,6 @@ class Native {
     }
 
     static public function wrap(callback : Dynamic) : Bool {
-#if js
-    untyped __js__("if (typeof Fiber == 'undefined') { globalThis.Fiber = require('fibers'); }");
-    untyped __js__("if (typeof sqlite3 == 'undefined') { globalThis.sqlite3 = require('sqlite3'); }");
-    untyped __js__("Fiber(function() { callback.body(); }).run();");
-    return true;
 #end
     return false;
     }

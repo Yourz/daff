@@ -27,8 +27,6 @@ js:
 	cat env/js/ndjson_table_view.js >> lib/daff.js
 	cat env/js/fix_exports_some_more.js >> lib/daff.js
 	cp lib/daff.js lib/core.js  # brutally freeze a web-compatible core
-	cat env/js/sqlite_database.js >> lib/daff.js
-	cat env/js/util.js >> lib/daff.js
 	@echo "#######################################################"
 	@echo "## Make executable version (just add shebang)"
 	echo "#!/usr/bin/env node" > bin/daff.js
